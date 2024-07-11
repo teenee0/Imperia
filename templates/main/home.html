@@ -1,12 +1,104 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar">
+{#<nav class="navbar navbar-expand-lg fixed-top">#}
+{#    <div class="container-fluid">#}
+{#        <a class="navbar-brand" href="#">Империя</a>#}
+{#        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">#}
+{#            <span class="navbar-toggler-icon"></span>#}
+{#        </button>#}
+{#        <div class="collapse navbar-collapse" id="navbarNav">#}
+{#            <ul class="navbar-nav ml-auto nav-bordered">#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">ЖЕНЩИНАМ</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">МУЖЧИНАМ</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">НОВИНКИ</a>#}
+{#                </li>#}
+{#            </ul>#}
+{#        </div>#}
+{#    </div>#}
+{#</nav>#}
+<nav class="navbar  navbar-expand-lg fixed-top ">
+    
+    <div class="container-fluid">
+        <div class="navbar-brand">
+            <div class="brand">
+            <span>Империя</span>
+            <img src="{% static 'main/img/logo_imperiaa.png' %}" alt="Miledi Logo" class="brand-logo">
+            </div>
+            <div class="nv-toggler">
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-nowrap">
+                <li class="nav-item" style="color: black">
+                    <a href="#" class="nav-link">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#male" class="nav-link">Мужчины</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#female" class="nav-link">Женщины</a>
+                </li>
+            </ul>
+        
+        
+        
+            <ul class="navbar-nav ml-auto" style="">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Контакты</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#location" class="nav-link">Локация</a>
+                </li>
+                
+
+            </ul>
+        </div>
+        
         
     </div>
+    
+</nav>
+
+<div class="main-home">
+    
+        <div class="big-photo-video">
+            <video  width="800" height="500" controls autoplay loop muted>
+                <source src="{% static 'main/video/vid1.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            
+        </div>
+    
+    
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 </body>
+
 </html>

@@ -1,0 +1,190 @@
+body {
+
+     /* Учитываем фиксированную навигационную панель */
+    margin-top: 7%;
+}
+
+/*.navbar {*/
+/*    background-color: #f8f8f8;*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.navbar-toggler-icon {*/
+/*    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");*/
+/*}*/
+
+
+/*.navbar-brand {*/
+/*    font-size: 1.5rem;*/
+/*    font-weight: bold;*/
+/*    color: black;*/
+/*    text-decoration: none;*/
+/*    display: block;*/
+/*    cursor: default;*/
+/*}*/
+/*.navbar-brand:hover {*/
+/*    color: black;*/
+/*}*/
+
+/*.navbar-nav .nav-link {*/
+/*    color: #000000;*/
+/*    font-size: 1.2rem;*/
+/*    font-weight: 50;*/
+
+/*}*/
+
+/*.navbar-nav .nav-link:hover{*/
+/*    color: red;*/
+/*}*/
+
+/*.navbar-nav .nav-link.active {*/
+/*    color: #a20004 !important;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.navbar-nav .nav-link i {*/
+/*    font-size: 1.5rem;*/
+/*}*/
+
+
+
+/*@media (max-width: 767.98px) {*/
+/*    .navbar-nav {*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .navbar-nav .nav-item {*/
+/*        margin: 10px;*/
+/*    }*/
+
+/*    .navbar-collapse {*/
+/*        justify-content: center;*/
+/*    }*/
+/*    .navbar-nav.nav-bordered .nav-item .nav-link {*/
+/*        border: 1px solid black; !* Цвет и толщина обводки *!*/
+/*        !* Закругленные углы *!*/
+/*        !* Внутренние отступы *!*/
+/*        margin-left: 10px; !* Отступы между элементами *!*/
+/*    }*/
+
+/*    .navbar-nav.nav-bordered .nav-item .nav-link:hover {*/
+/*        background-color: rgba(0, 0, 0, 0.1); !* Фон при наведении *!*/
+/*    }*/
+/*}*/
+/*nav2*/
+
+.navbar{
+    background-color: #ffffff;
+    height: 70px;
+    border-bottom: #6f0bcf;
+}
+.navbar-brand {
+    font-size: 2rem;
+    font-family: "Train One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    text-decoration: none;
+    display: block;
+    cursor: default;
+    position: fixed;
+    margin-left: 40%;
+
+}
+
+
+.navbar-brand img {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 13%;
+    max-width: 13%
+}
+/*.navbar-brand span {*/
+/*    margin-right: -5%; !* расстояние между текстом и изображением *!*/
+/*}*/
+
+
+
+
+
+
+
+.nv-toggler .navbar-toggler {
+    color: #6f0bcf;
+    border: none; /* Черная обводка толщиной 2px */
+    border-radius: 0px;
+     /* Цвет фона */
+    box-shadow: none; /* Тень */
+}
+
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(128, 128, 128, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Серый цвет иконки */
+}
+
+.nav-item a {
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+}
+.navbar-nav .nav-link:hover{
+    color: #85531e;
+}
+
+
+
+
+
+@media (max-width: 767.98px) {
+    .navbar{
+        background-color: #ffffff;
+        height: 70px;
+    }
+    .navbar-nav {
+        text-align: center;
+        background: wheat;
+
+    }
+
+    .nv-toggler{
+        display: inline-block;
+
+    }
+    body{
+        margin-top: 25%;
+    }
+    .navbar-brand{
+        width: 100%;
+
+        margin: 0%;
+        position: relative;
+        font-size: 1.5rem;
+
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+    }
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .navbar-collapse {
+        justify-content: center;
+    }
+}
+
+
+
+.main-home{
+    margin: 0% 15% 15% 15%;
+    height: 600px;
+    background-color: #6f0bcf;
+}
+.big-photo-video{
+    justify-content: center;
+
+}
+
+
