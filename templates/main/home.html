@@ -1,104 +1,106 @@
+{% extends 'main/layout.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Example</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
-</head>
-<body>
-{#<nav class="navbar navbar-expand-lg fixed-top">#}
-{#    <div class="container-fluid">#}
-{#        <a class="navbar-brand" href="#">Империя</a>#}
-{#        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">#}
-{#            <span class="navbar-toggler-icon"></span>#}
-{#        </button>#}
-{#        <div class="collapse navbar-collapse" id="navbarNav">#}
-{#            <ul class="navbar-nav ml-auto nav-bordered">#}
-{#                <li class="nav-item">#}
-{#                    <a class="nav-link" href="#">ЖЕНЩИНАМ</a>#}
-{#                </li>#}
-{#                <li class="nav-item">#}
-{#                    <a class="nav-link" href="#">МУЖЧИНАМ</a>#}
-{#                </li>#}
-{#                <li class="nav-item">#}
-{#                    <a class="nav-link" href="#">НОВИНКИ</a>#}
-{#                </li>#}
-{#            </ul>#}
-{#        </div>#}
-{#    </div>#}
-{#</nav>#}
-<nav class="navbar  navbar-expand-lg fixed-top ">
-    
-    <div class="container-fluid">
-        <div class="navbar-brand">
-            <div class="brand">
-            <span>Империя</span>
-            <img src="{% static 'main/img/logo_imperiaa.png' %}" alt="Miledi Logo" class="brand-logo">
-            </div>
-            <div class="nv-toggler">
-            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        </div>
-        
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-nowrap">
-                <li class="nav-item" style="color: black">
-                    <a href="#" class="nav-link">Главная</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#male" class="nav-link">Мужчины</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#female" class="nav-link">Женщины</a>
-                </li>
-            </ul>
-        
-        
-        
-            <ul class="navbar-nav ml-auto" style="">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Контакты</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#location" class="nav-link">Локация</a>
-                </li>
-                
-
-            </ul>
-        </div>
-        
-        
-    </div>
-    
-</nav>
-
+{% block title %} Империя {% endblock %}
+{% block content %}
 <div class="main-home">
-    
-        <div class="big-photo-video">
-            <video  width="800" height="500" controls autoplay loop muted>
-                <source src="{% static 'main/video/vid1.mp4' %}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            
-            
+
+    <div class="big-photo-video">
+        <video  autoplay loop muted>
+            <source src="{% static 'main/video/vid1.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+
+    </div>
+    <div class="photo-gallery">
+        <div>
+            <img src="{% static 'main/img/main-photo1.png' %}"  class="main-logo1">
+
         </div>
-    
-    
+        <div>
+            <img src="{% static 'main/img/main-photo2.png' %}"  class="main-logo2">
+        </div>
+    </div>
+
+
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-</body>
+<h1 id="location" class="mid_head">Контакты</h1>
+<div class="contacts_block">
+    <div class="contacts">
+        <img class="background-img" src="{% static 'main/img/bg1.jpg' %}">
+        <h2 class="shop_adr">Магазин по ул.Гагарина</h2>
+        <div class="contact">
+            <h3 class="messengers_name">Instagram</h3>
+            <div class="messengers">
+                <img src="{% static 'main/img/inst_logo.png' %}"  class="messengers_logo">
+                <h2><a class="inst_url" href="https://www.instagram.com/imperia_gagarina23a/">imperia_gagarina23a</a> </h2>
+            </div>
+            <h3 class="messengers_name">Whatsapp</h3>
+            <div class="messengers">
+                <img src="{% static 'main/img/whatsapp_logo.png' %}"  class="messengers_logo">
+                <h2><a class="inst_url" href="https://api.whatsapp.com/message/5NCINBTLSMB2P1?autoload=1&app_absent=0">+7 775 394 0150</a> </h2>
+            </div>
+        </div>
+        <div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/org/imperiya/50904120725/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;"></a><a href="https://yandex.kz/maps/20809/kokshetau/category/fur_and_leather_shop/184107939/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;"></a><iframe src="https://yandex.kz/map-widget/v1/?from=mapframe&ll=69.373357%2C53.288917&mode=poi&poi%5Bpoint%5D=69.373451%2C53.288871&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D50904120725&z=19" width="100%" height="400" frameborder="1" allowfullscreen="true" style=""></iframe></div>
 
-</html>
+    </div>
+
+</div>
+<div class="contacts_block">
+    <div class="contacts">
+        <img class="background-img" src="{% static 'main/img/bg2.jpg' %}">
+        <h2 class="shop_adr">Магазин по ул.Акана Серы</h2>
+        <div class="contact">
+            
+            <h3 class="messengers_name">Instagram</h3>
+            <div class="messengers">
+                <img src="{% static 'main/img/inst_logo.png' %}"  class="messengers_logo">
+                <h2><a class="inst_url" href="https://www.instagram.com/imperiya.mexx/">imperiya.mexx</a> </h2>
+            </div>
+            <h3 class="messengers_name">Whatsapp</h3>
+            <div class="messengers">
+                <img src="{% static 'main/img/whatsapp_logo.png' %}"  class="messengers_logo">
+                <h2><a class="inst_url" href="https://api.whatsapp.com/send/?phone=77018759577&text&type=phone_number&app_absent=0">+7 701 875 9577</a> </h2>
+            </div>
+        </div>
+        <div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/ru/org/imperiya/171128460070/?lang=ru&utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">
+        </a>
+            <a href="https://yandex.kz/maps/ru/20809/kokshetau/category/fur_and_leather_shop/184107939/?lang=ru&utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">
+            </a>
+            <a href="https://yandex.kz/maps/ru/20809/kokshetau/category/clothing_store/184107943/?lang=ru&utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;"></a>
+            <iframe src="https://yandex.kz/map-widget/v1/?ll=69.386908%2C53.280633&mode=poi&poi%5Bpoint%5D=69.386199%2C53.280907&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D171128460070&z=17" width="100%" height="400" frameborder="1" allowfullscreen="true" style="">
+
+            </iframe>
+        </div>
+
+    </div>
+
+</div>
+<h1 id="credit" class="mid_head2">Кредит</h1>    
+<div class="credit-block">
+    <div class="credit-card">
+        <img class="credit-img" src="{% static 'main/img/credit-back.jpg' %}">
+        <h5 class="credit-text">У ПОКУПАТЕЛЕЙ КОМПАНИИ «Империя»
+            ЕСТЬ ПРЕКРАСНАЯ ВОЗМОЖНОСТЬ ПРИОБРЕСТИ
+            ЛЮБУЮ ПОНРАВИВШУЮСЯ ОДЕЖДУ
+            В КРЕДИТ БЕЗ ПЕРЕПЛАТЫ И ПЕРВОНАЧАЛЬНОГО ВЗНОСА НА СРОК ДО 24 МЕСЯЦЕВ,
+            НЕ ОТКЛАДЫВАЯ ПОКУПКУ ДО ЛУЧШИХ ВРЕМЁН</h5>
+        
+        <span class="tag1">Рассрочка</span>
+        <span class="credit-nums">0-0-24</span>
+        <div class="container1">
+            <h1 class="title">КАК ОФОРМИТЬ КРЕДИТ В РОЗНИЧНЫХ МАГАЗИНАХ</h1>
+            <ul class="steps">
+                <li>Приходите в удобный Вам магазин.</li>
+                <li>Выберите товар.</li>
+                <li>Обратитесь к сотруднику банка или сотруднику магазина, вместе с ним заполните кредитную заявку и дождитесь решения одного из Банков.</li>
+                <li>В случае положительного решения Банка, Вы на месте подписываете кредитный договор и забираете свою покупку. В случае отрицательного решения, Вы можете оплатить товар наличными, банковской картой, подарочной картой.</li>
+            </ul>
+        </div>
+    </div>
+</div>    
+    
+{% endblock %}
+

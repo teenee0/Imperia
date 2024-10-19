@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %} Мужское {% endblock %}
+{% block content %}
+    <div class="ask_block" style="margin-top: 6%">
+        <a href="{% url 'mens_outerwear' %}">
+            <div class="outerwear">
+{#                <img src="{% static 'main/img/куртка-мульт.png' %}">#}
+                <h1 class="ask_h1">Верхняя Одежда</h1>
+            </div>
+        </a>
+    </div>
+    <div class="ask_block" style="margin-top: 2%">
+        <a href="{% url 'mens_accessories' %}">
+            <div class="outerwear">
+{#                <img src="{% static 'main/img/шапка-мульт.png' %}">#}
+                <h1 class="ask_h1">Аксессуары</h1>
+            </div>
+        </a>
+    </div>
+{% endblock %}

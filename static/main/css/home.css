@@ -1,83 +1,107 @@
+html {
+    position: relative;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
 body {
-
+    margin-top: 70px;
      /* Учитываем фиксированную навигационную панель */
-    margin-top: 7%;
+
 }
 
-/*.navbar {*/
-/*    background-color: #f8f8f8;*/
-/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+
+/*.navbar{*/
+/*    background-color: #ffffff;*/
+/*    height: 70px;*/
+/*    border-bottom: #6f0bcf;*/
 /*}*/
-
-/*.navbar-toggler-icon {*/
-/*    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");*/
-/*}*/
-
-
 /*.navbar-brand {*/
-/*    font-size: 1.5rem;*/
-/*    font-weight: bold;*/
+/*    font-size: 2rem;*/
+/*    font-family: "Train One", system-ui;*/
+/*    font-weight: 400;*/
+/*    font-style: normal;*/
 /*    color: black;*/
 /*    text-decoration: none;*/
 /*    display: block;*/
 /*    cursor: default;*/
-/*}*/
-/*.navbar-brand:hover {*/
-/*    color: black;*/
-/*}*/
-
-/*.navbar-nav .nav-link {*/
-/*    color: #000000;*/
-/*    font-size: 1.2rem;*/
-/*    font-weight: 50;*/
+/*    position: fixed;*/
+/*    margin-left: 40%;*/
 
 /*}*/
 
-/*.navbar-nav .nav-link:hover{*/
-/*    color: red;*/
+
+/*.navbar-brand img {*/
+/*    display: inline-block;*/
+/*    vertical-align: middle;*/
+/*    max-height: 13%;*/
+/*    max-width: 13%*/
+/*}*/
+/*!*.navbar-brand span {*!*/
+/*!*    margin-right: -5%; !* расстояние между текстом и изображением *!*!*/
+/*!*}*!*/
+
+
+
+
+
+
+
+/*.nv-toggler .navbar-toggler {*/
+/*    color: #6f0bcf;*/
+/*    border: none; !* Черная обводка толщиной 2px *!*/
+
+/*     !* Цвет фона *!*/
+/*    box-shadow: none; !* Тень *!*/
 /*}*/
 
-/*.navbar-nav .nav-link.active {*/
-/*    color: #a20004 !important;*/
-/*    font-weight: bold;*/
+
+/*.navbar-toggler-icon {*/
+/*    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(128, 128, 128, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); !* Серый цвет иконки *!*/
 /*}*/
 
-/*.navbar-nav .nav-link i {*/
-/*    font-size: 1.5rem;*/
+/*.nav-item a {*/
+/*    font-family: "Baskervville SC", serif;*/
+/*    font-weight: 400;*/
+/*    font-style: normal;*/
+/*    color: rgb(0, 0, 0);*/
+/*    font-size: 1.3rem;*/
+/*}*/
+/*.nav-link:hover{*/
+/*    color: rgba(181, 155, 155, 0.56);*/
+/*}*/
+/*.nav-link::before{*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    width: 0;*/
+/*    height: 3px;*/
+/*    bottom: 5px;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    background-color: rgba(181, 155, 155, 0.56);*/
+/*    visibility: hidden;*/
+/*    transition: all 0.3s ease-in-out 0s;*/
+/*}*/
+/*.nav-link:hover:before {*/
+/*    visibility: visible;*/
+/*    width: 100%;*/
 /*}*/
 
-
-
-/*@media (max-width: 767.98px) {*/
-/*    .navbar-nav {*/
-/*        text-align: center;*/
-/*    }*/
-
-/*    .navbar-nav .nav-item {*/
-/*        margin: 10px;*/
-/*    }*/
-
-/*    .navbar-collapse {*/
-/*        justify-content: center;*/
-/*    }*/
-/*    .navbar-nav.nav-bordered .nav-item .nav-link {*/
-/*        border: 1px solid black; !* Цвет и толщина обводки *!*/
-/*        !* Закругленные углы *!*/
-/*        !* Внутренние отступы *!*/
-/*        margin-left: 10px; !* Отступы между элементами *!*/
-/*    }*/
-
-/*    .navbar-nav.nav-bordered .nav-item .nav-link:hover {*/
-/*        background-color: rgba(0, 0, 0, 0.1); !* Фон при наведении *!*/
-/*    }*/
-/*}*/
-/*nav2*/
-
-.navbar{
+/* Navbar Styles */
+.navbar {
     background-color: #ffffff;
     height: 70px;
-    border-bottom: #6f0bcf;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem; /* Добавляем немного отступов */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
+
 .navbar-brand {
     font-size: 2rem;
     font-family: "Train One", system-ui;
@@ -89,37 +113,23 @@ body {
     cursor: default;
     position: fixed;
     margin-left: 40%;
-
 }
-
 
 .navbar-brand img {
     display: inline-block;
     vertical-align: middle;
     max-height: 13%;
-    max-width: 13%
-}
-/*.navbar-brand span {*/
-/*    margin-right: -5%; !* расстояние между текстом и изображением *!*/
-/*}*/
-
-
-
-
-
-
-
-.nv-toggler .navbar-toggler {
-    color: #6f0bcf;
-    border: none; /* Черная обводка толщиной 2px */
-    border-radius: 0px;
-     /* Цвет фона */
-    box-shadow: none; /* Тень */
+    max-width: 13%;
 }
 
+.navbar-toggler {
+    color: rgba(241, 241, 241, 0);
+    border: none;
+    box-shadow: none;
+}
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(128, 128, 128, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Серый цвет иконки */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(128, 128, 128, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .nav-item a {
@@ -129,43 +139,129 @@ body {
     color: rgb(0, 0, 0);
     font-size: 1.3rem;
 }
-.navbar-nav .nav-link:hover{
-    color: #85531e;
+
+.nav-link:hover {
+    color: rgba(181, 155, 155, 0.56);
 }
 
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(181, 155, 155, 0.56);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+}
 
+.nav-link:hover::before {
+    visibility: visible;
+    width: 100%;
+}
 
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
 
+    padding-top: 70px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: left 0.3s ease-in-out;
+}
 
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav .nav-item {
+    margin-bottom: 1rem;
+}
+
+.sidebar-nav .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.sidebar-nav .nav-link:hover {
+    color: rgba(181, 155, 155, 0.56);
+}
+
+.sidebar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(181, 155, 155, 0.56);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.sidebar-nav .nav-link:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    transition: display 0.3s ease-in-out;
+}
+
+/* Media Queries */
 @media (max-width: 767.98px) {
-    .navbar{
+    .navbar {
         background-color: #ffffff;
         height: 70px;
+        position: fixed !important;
     }
+
     .navbar-nav {
         text-align: center;
         background: wheat;
-
     }
 
-    .nv-toggler{
+    .nv-toggler {
         display: inline-block;
+    }
 
+    body {
+        margin-top: 70px !important;
     }
-    body{
-        margin-top: 25%;
-    }
-    .navbar-brand{
+
+    .navbar-brand {
         width: 100%;
-
         margin: 0%;
         position: relative;
-        font-size: 1.5rem;
-
         align-items: center;
         justify-content: space-between;
         display: flex;
     }
+
     .navbar-nav .nav-item {
         margin-bottom: 10px;
     }
@@ -176,15 +272,407 @@ body {
 }
 
 
+@media (max-width: 767.98px) {
+    /*.navbar{*/
+    /*    background-color: #ffffff;*/
+    /*    height: 70px;*/
+    /*}*/
+    /*.navbar-nav {*/
+    /*    text-align: center;*/
+    /*    background: wheat;*/
+
+    /*}*/
+
+    /*.nv-toggler{*/
+    /*    display: inline-block;*/
+
+    /*}*/
+    /*body{*/
+    /*    margin-top: 70px !important;*/
+    /*}*/
+    /*.navbar-brand{*/
+    /*    width: 100%;*/
+
+    /*    margin: 0%;*/
+    /*    position: relative;*/
+
+
+    /*    align-items: center;*/
+    /*    justify-content: space-between;*/
+    /*    display: flex;*/
+    /*}*/
+    /*.navbar-nav .nav-item {*/
+    /*    margin-bottom: 10px;*/
+    /*}*/
+
+    /*.navbar-collapse {*/
+    /*    justify-content: center;*/
+    /*}*/
+    .big-photo-video video {
+        width: 200% !important;  /* Ширина видео 100% от ширины контейнера */
+         /* Высота автоматически подстраивается для сохранения соотношения сторон */
+
+    }
+    .photo-gallery img{
+        margin-top: 5% !important;
+        margin-left: 40%;
+        height: 20% !important;
+
+    }
+    .contacts{
+        margin-top: -50px !important;
+        width: 100% !important;
+    }
+
+
+    .messengers h2 a{
+        font-size: 1.2rem;
+    }
+
+    .mid_head{
+        margin-top: -10% !important;
+
+    }
+
+    .contacts_block{
+        margin-top: 17%;
+    }
+
+
+    .form-row{
+        display: block !important;
+    }
+
+
+
+
+    .outerwear {
+        height: 200px !important;
+        width: 95vw !important;
+
+
+    }
+
+    .ask_h1 {
+        margin-left: 0% !important;
+        font-size: 3rem !important; /* Уменьшить размер шрифта */
+        text-align: center !important; /* Выровнять текст по центру */
+    }
+
+
+
+    .credit-nums{
+        font-size: 5rem !important;
+    }
+
+    .credit-text{
+        font-size: 1rem !important;
+    }
+    .credit-card{
+
+        width: 100% !important;
+    }
+
+    .container{
+        padding: 0px !important;
+    }
+
+}
+
+
+
+
+
 
 .main-home{
-    margin: 0% 15% 15% 15%;
     height: 600px;
-    background-color: #6f0bcf;
+    width: 100%;
+    background-color: rgba(111, 11, 207, 0);
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center;
+
 }
 .big-photo-video{
-    justify-content: center;
+
+    display: block;
+    width: 20%; /* Устанавливаем ширину контейнера для видео */
+    height: 17%;
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+
+}
+.big-photo-video video {
+    border-radius: 10px;
+    width: 90%; /* Ширина видео 100% от ширины контейнера */
+    height: auto; /* Высота автоматически подстраивается для сохранения соотношения сторон */
+    object-fit: contain;
+    /* Максимальная высота видео - высота экрана */
+}
+.photo-gallery img{
+    border-radius: 10px;
+    margin-top: 5%;
+    height: 40%;
 
 }
 
 
+
+
+.mid_head{
+    margin: 6%;
+    text-align: center;
+}
+
+.contacts_block {
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts {
+    position: relative; /* Добавляем для позиционирования фонового изображения */
+    border: 1px solid #bebebe;
+    /*border-radius: 100px;*/
+    width: 70%;
+    padding-top: 3%;
+    text-align: center;
+    /*background-color: rgba(0, 0, 0, 0.4);*/
+
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Это гарантирует, что изображение не выйдет за границы блока */
+}
+
+.background-img {
+    filter: brightness(30%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Это гарантирует, что изображение покроет весь блок */
+    z-index: -1; /* Это отправляет изображение на задний план */
+}
+
+.messengers_name {
+    font-size: 2rem;
+    color: white;
+}
+
+.messengers {
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inst_url {
+    color: #ffffff;
+}
+
+.shop_adr{
+    color: white;
+}
+
+.messengers_logo {
+    margin-right: 10px;
+}
+
+#btn_col {
+    text-decoration: none;
+    color: black;
+}
+
+#btn_col:hover {
+    color: #85531e;
+}
+
+
+
+
+
+
+
+
+.credit-block {
+    height: 1000px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 5%;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
+
+.credit-card {
+    height: auto;
+
+    border: 1px solid #bebebe;
+    /*border-radius: 100px;*/
+    width: 70%;
+    padding-top: 3%;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    position: relative;
+    overflow: hidden; /* Add this to ensure the image doesn't overflow */
+}
+
+.credit-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; /* Position the image absolutely within the credit-card */
+    top: 0;
+    left: 0;
+    filter: brightness(30%)
+}
+
+.mid_head2 {
+    margin: 5%;
+    text-align: center;
+}
+
+.credit-text {
+    margin: 2% 15% 5% 15%;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: white;
+    position: relative; /* Ensure the text is positioned relative to the credit-card */
+    z-index: 1; /* Ensure the text is above the image */
+}
+
+.tag1{
+
+    position: absolute;
+    text-align: left;
+    color: white;
+     /* Ensure the text is positioned relative to the credit-card */
+    z-index: 1; /* Ensure the text is above the image */
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.credit-nums{
+    color: white;
+    position: relative; /* Ensure the text is positioned relative to the credit-card */
+    z-index: 1; /* Ensure the text is above the image */
+    font-size: 10rem;
+    font-weight: 500;
+}
+
+.container1 {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+    border-radius: 8px;
+
+    position: relative; /* Ensure the text is positioned relative to the credit-card */
+    z-index: 1;
+    color: white;
+
+
+}
+
+.title {
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.steps {
+    list-style-type: disc;
+    margin: 0;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.steps li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+.product-card {
+    /*border: 0.1px solid #ddd;*/
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: box-shadow 0.3s;
+}
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+.product-info {
+    margin-top: 15px;
+}
+.form-row{
+    display: flex;
+    background-color: rgba(181, 155, 155, 0);
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+.ask_block {
+    height: 300px;
+    width: 100%;
+    background-color: rgba(111, 11, 207, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outerwear {
+    height: 300px;
+    width: 80vw;
+    background-color: rgba(255, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #bebebe;
+    border-radius: 100px;
+    overflow: hidden; /* Скрыть излишки содержимого */
+    transition: box-shadow 0.3s;
+}
+
+.ask_block img {
+    margin-left: 10%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.ask_h1 {
+    /*margin-left: 10%;*/
+    font-size: 4rem;
+    text-decoration: none;
+    color: #000;
+    object-fit: contain;
+}
+
+.ask_block a {
+    text-decoration: none;
+}
+.outerwear:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

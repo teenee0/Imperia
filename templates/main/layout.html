@@ -1,0 +1,187 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+{#<nav class="navbar navbar-expand-lg fixed-top">#}
+{#    <div class="container-fluid">#}
+{#        <a class="navbar-brand" href="#">Империя</a>#}
+{#        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">#}
+{#            <span class="navbar-toggler-icon"></span>#}
+{#        </button>#}
+{#        <div class="collapse navbar-collapse" id="navbarNav">#}
+{#            <ul class="navbar-nav ml-auto nav-bordered">#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">ЖЕНЩИНАМ</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">МУЖЧИНАМ</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">НОВИНКИ</a>#}
+{#                </li>#}
+{#            </ul>#}
+{#        </div>#}
+{#    </div>#}
+{#</nav>#}
+{#<nav class="navbar  navbar-expand-lg fixed-top ">#}
+{##}
+{#    <div class="container-fluid">#}
+{#        <div class="navbar-brand">#}
+{#            <div class="brand">#}
+{#                <span>Империя</span>#}
+{#                <img src="{% static 'main/img/logo_imperiaa.png' %}"  class="brand-logo">#}
+{#            </div>#}
+{#            <div class="nv-toggler">#}
+{#                <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">#}
+{#                    <span class="navbar-toggler-icon"></span>#}
+{#                </button>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <div class="collapse navbar-collapse" id="navbarCollapse">#}
+{#            <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-nowrap">#}
+{#                <li class="nav-item">#}
+{#                    <a href="{% url 'main' %}" class="nav-link">Главная</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a href="{% url 'ask_Men' %}" class="nav-link">Мужчины</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a href="{% url 'ask_Women' %}" class="nav-link">Женщины</a>#}
+{#                </li>#}
+{#            </ul>#}
+{##}
+{##}
+{##}
+{#            <ul class="navbar-nav ml-auto" style="">#}
+{#                <li class="nav-item">#}
+{#                    <a href="{% url 'main' %}#location" class="nav-link">Контакты</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a href="{% url 'main' %}#location" class="nav-link">Локация</a>#}
+{#                </li>#}
+{##}
+{##}
+{#            </ul>#}
+{#        </div>#}
+{##}
+{##}
+{#    </div>#}
+{##}
+{#</nav>#}
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-brand">
+            <div class="brand">
+                <span>Империя</span>
+                <img src="{% static 'main/img/logo_imperiaa.png' %}" class="brand-logo">
+            </div>
+            <div class="nv-toggler">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-nowrap">
+                <li class="nav-item" style="color: black">
+                    <a href="{% url 'main' %}" class="nav-link">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'ask_Men' %}" class="nav-link">Мужчины</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'ask_Women' %}" class="nav-link">Женщины</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto" style="">
+                <li class="nav-item">
+                    <a href="{% url 'main' %}" class="nav-link">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'main' %}#location" class="nav-link">Локация</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'main' %}#credit" class="nav-link">Кредит</a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</nav>
+
+<!-- Sidebar for small screens -->
+<div id="sidebar" class="sidebar">
+    <ul class="sidebar-nav">
+        <li class="nav-item">
+            <a href="{% url 'main' %}" class="nav-link">Главная</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'ask_Men' %}" class="nav-link">Мужчины</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'ask_Women' %}" class="nav-link">Женщины</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'main' %}#location" class="nav-link">Контакты</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'main' %}#location" class="nav-link">Локация</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'main' %}#credit" class="nav-link">Кредит</a>
+        </li>
+    </ul>
+</div>
+
+<div id="overlay" class="overlay"></div>
+{% block content %}
+    
+{% endblock %}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    
+    // Удаление якоря из URL после перехода
+    window.addEventListener("hashchange", function() {
+        if (window.location.hash) {
+            window.history.replaceState(null, null, ' ');
+        }
+    });
+
+    // Удаление якоря из URL после загрузки страницы с якорем
+    window.addEventListener("load", function() {
+        if (window.location.hash) {
+            window.history.replaceState(null, null, ' ');
+        }
+    });
+    document.querySelector('.navbar-toggler').addEventListener('click', function() {
+        document.getElementById('sidebar').style.left = '0';
+        document.getElementById('overlay').style.display = 'block';
+    });
+
+    document.getElementById('overlay').addEventListener('click', function() {
+        document.getElementById('sidebar').style.left = '-250px';
+        this.style.display = 'none';
+    });
+</script>
+</body>
+
+</html>

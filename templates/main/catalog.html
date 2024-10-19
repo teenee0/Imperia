@@ -1,0 +1,56 @@
+
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+    <div class="container" style="color: black">
+        <form method="get" class="filter-form">
+            <div class="form-row">
+                <div class="col">
+                    {{ form.name.label_tag }}
+                    {{ form.name }}
+                </div>
+                <div class="col">
+                    {{ form.min_price.label_tag }}
+                    {{ form.min_price }}
+                </div>
+                <div class="col">
+                    {{ form.max_price.label_tag }}
+                    {{ form.max_price }}
+                </div>
+                <div class="col">
+                    {{ form.clothing_type.label_tag }}
+                    {% if 'outerwear' in action %}
+                        {{ form.clothing_type }}
+                    {% endif %}
+                    {% if 'accessories' in action %}
+                        {{ form.accessories_type }}
+                    {% endif %}
+                </div>
+                <div class="col">
+                    <label>&nbsp;</label><br>
+                    <button type="submit" class="btn btn-primary">Применить</button>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+                        <div class="product-info">
+                            <h5>{{ product.name }}</h5>
+                            <p>Цена: {{ product.price }} Т</p>
+                            <p>Размеры: {{ product.size }}</p>
+                            <p>Тип: {{ product.get_clothing_type_display }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+{% endblock %}
